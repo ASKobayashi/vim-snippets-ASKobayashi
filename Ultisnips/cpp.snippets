@@ -1,6 +1,11 @@
-snippet omg "namespace .. (namespace)"
-namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
-{
-	${VISUAL}$0
-}${1/.+/ \/* /m}$1${1/.+/ *\/ /m}
+snippet dparam "Doxygen Comment"
+@param[${1:in/out/in,out}] ${2:name} ${3:description}
+endsnippet
+
+snippet dfunc "Doxygen Function"
+/**
+ * ${1:Brief}
+ *
+ * ${2:Details}
+ */
 endsnippet
